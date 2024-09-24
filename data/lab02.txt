@@ -1,0 +1,9 @@
+kind: Cluster
+name: Lab02
+description: Ann Arbor Lab
+timezone: Americas/NewYork
+metadata:
+  type: lab
+  region: East
+  state: MI
+  city: AnnArbor

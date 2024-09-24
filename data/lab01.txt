@@ -1,0 +1,9 @@
+kind: Cluster
+name: Lab01
+description: Austin Lab
+timezone: Americas/Chicago
+metadata:
+  type: lab
+  region: Central
+  state: TX
+  city: Austin
