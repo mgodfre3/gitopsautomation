@@ -6,7 +6,19 @@
 
 ## Quick Start
 
-- todo
+```bash
+
+# change thse
+GITHUB_NAME=bartr
+PAT=myGitHubPAT
+
+# add the nuget source
+dotnet nuget add source --username $GITHUB_NAME --password $PAT --store-password-in-clear-text --name goa "https://nuget.pkg.github.com/bartr/index.json"
+
+# install the dotnet tool
+dotnet tool install --global gitops-automation
+
+```
 
 ## Support
 
