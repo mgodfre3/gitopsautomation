@@ -5,6 +5,7 @@ metadata:
   namespace: heartbeat
   labels:
     app.kubernetes.io/name: heartbeat
+    name: TX-Cedar-Park
 spec:
   replicas: 1
   strategy:

@@ -5,6 +5,7 @@ metadata:
   namespace: heartbeat
   labels:
     app.kubernetes.io/name: heartbeat
+    name: rea.cluster.name
 spec:
   replicas: 1
   strategy:

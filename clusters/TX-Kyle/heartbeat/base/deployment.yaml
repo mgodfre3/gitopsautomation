@@ -5,6 +5,7 @@ metadata:
   namespace: heartbeat
   labels:
     app.kubernetes.io/name: heartbeat
+    name: TX-Kyle
 spec:
   replicas: 1
   strategy:
