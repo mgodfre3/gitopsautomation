@@ -1,0 +1,33 @@
+kind: Group
+path: /us
+description: United States
+metadata:
+  type: group
+
+---
+
+kind: Group
+path: /us/central
+description: United States - Central
+metadata:
+  region: Central
+
+---
+
+kind: Group
+path: /us/central/texas
+description: United States - Texas
+metadata:
+  state: TX
+
+---
+
+kind: Group
+path: /us/central/texas/austin
+description: United States - Austin, TX
+clusters:
+  - TX-Austin-2001
+  - TX-Austin-2002
+  - TX-Austin-2003
+metadata:
+  city: Austin

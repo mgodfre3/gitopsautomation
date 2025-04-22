@@ -1,90 +1,79 @@
 kind: Application
 name: cert-manager
-version: 1.14.4
 description: Cert Manager
-path: charts/cert-manager
-expression: /c/*
-overrideDeploymentWindows: false
 namespace: cert-manager
 metadata:
   type: add-on
-
----
-
-kind: Application
-name: ingress-nginx
-version: 1.10.1
-description: Nginx Ingress
-path: charts/ingress-nginx
-expression: /c/*
-overrideDeploymentWindows: false
-namespace: ingress-nginx
-metadata:
-  type: add-on
+versions:
+  - version: 1.14.4
+    path: apps/cert-manager
+    expression: /c/*
+    metadata:
+      imageTag: 1.14.4
 
 ---
 
 kind: Application
 name: heartbeat
-version: 0.1.0
 description: Heartbeat
-path: charts/heartbeat
-expression: /c/*
-overrideDeploymentWindows: false
 namespace: heartbeat
 metadata:
   type: add-on
-  imageTag: 0.1.0
-
----
-
-    kind: AppVersion
-    name: heartbeat
-    version: 0.3.0
-    description: Heartbeat
-    path: charts/heartbeat
-    expression: /m/type/lab
-    overrideDeploymentWindows: false
-    namespace: heartbeat
+  dependsOn: cert-manager
+versions:
+  - version: 0.1.0
+    path: apps/heartbeat/base
+    expression: /c/*
     metadata:
-      type: add-on
-      imageTag: 0.3.0
+      imageTag: 0.1.0
+  - version: 0.4.0
+    path: apps/heartbeat/overlays/v0.4.0
+    #expression: /m/ring/0
+    metadata:
+      imageTag: 0.4.0
 
----
+# ---
 
-kind: Application
-name: imdb
-version: 1.0.0
-description: imdb
-path: apps/imdb/base
-expression: /c/*
-overrideDeploymentWindows: false
-namespace: imdb
-metadata:
-  type: application
+# kind: Application
+# name: make-line
+# description: Make Line
+# namespace: make-line
+# metadata:
+#   type: application
+# versions:
+#   - version: 0.1.0
+#     path: apps/make-line/base
+#     expression: /c/*
+#     metadata:
+#       imageTag: 0.1.0
 
----
+# ---
 
-kind: AppVersion
-name: imdb
-version: 1.1.0
-description: imdb
-path: apps/imdb/overlays/v1.1.0
-expression: /m/type/lab
-overrideDeploymentWindows: false
-namespace: imdb
-metadata:
-  type: application
+# kind: Application
+# name: ingress-nginx
+# description: Ingress NGINX
+# namespace: ingress-nginx
+# metadata:
+#   type: add-on
+#   dependsOn: cert-manager
+# versions:
+#   - version: 1.10.1
+#     path: apps/ingress-nginx
+#     expression: /c/*
+#     metadata:
+#       imageTag: 1.10.1
 
----
+# ---
 
-kind: AppVersion
-name: imdb
-version: 1.2.0
-description: imdb
-path: apps/imdb/overlays/v1.2.0
-expression: /c/Lab01
-overrideDeploymentWindows: false
-namespace: imdb
-metadata:
-  type: application
+# kind: Application
+# name: pos
+# description: POS
+# namespace: pos
+# metadata:
+#   type: application
+# versions:
+#   - version: 0.1.0
+#     path: apps/pos/base
+#     expression: /c/*
+#     metadata:
+#       imageTag: 0.1.0

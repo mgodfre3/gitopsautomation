@@ -7,39 +7,14 @@
 ## Prerequisites
 
 - Git CLI
-- dotnet SDK 8.0
-- GitHub Personal Access Token
 
 ## Quick Start
 
 ```bash
 
-# set environment variables
-# note: the PAT must be a GitHub Personal Access Token
-GITHUB_NAME=bartr
-PAT=myGitHubPAT
-
-```
-
-```bash
-
 # clone this repo
 git clone https://github.com/bartr/gitopsautomation
-cd gitopsautomation
 git pull
-
-```
-
-```bash
-
-# add the nuget source
-dotnet nuget add source --username $GITHUB_NAME --password $PAT --store-password-in-clear-text --name goa "https://nuget.pkg.github.com/bartr/index.json"
-
-# install the dotnet tool
-dotnet tool install --global gitops-automation
-
-# run the dotnet tool
-goa
 
 ```
 
