@@ -28,6 +28,9 @@ goa list clusters
 # list the applications
 goa list applications
 
+# list the clusters in ring 0
+goa eval -e "/m/ring/0"
+
 # re-generate the GitOps manifests
 goa gen
 git status
