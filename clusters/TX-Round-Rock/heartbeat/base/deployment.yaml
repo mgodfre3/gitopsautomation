@@ -5,7 +5,7 @@ metadata:
   namespace: heartbeat
   labels:
     app.kubernetes.io/name: heartbeat
-    name: TX-Round-Rock
+    storeName: TX-Round-Rock
 spec:
   replicas: 1
   strategy:

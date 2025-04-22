@@ -5,7 +5,7 @@ metadata:
   namespace: heartbeat
   labels:
     app.kubernetes.io/name: heartbeat
-    name: TX-Lockhart
+    storeName: TX-Lockhart
 spec:
   replicas: 1
   strategy:

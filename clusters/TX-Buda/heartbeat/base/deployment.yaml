@@ -5,7 +5,7 @@ metadata:
   namespace: heartbeat
   labels:
     app.kubernetes.io/name: heartbeat
-    name: TX-Buda
+    storeName: TX-Buda
 spec:
   replicas: 1
   strategy:

@@ -5,7 +5,7 @@ metadata:
   namespace: heartbeat
   labels:
     app.kubernetes.io/name: heartbeat
-    name: TX-Dripping-Springs
+    storeName: TX-Dripping-Springs
 spec:
   replicas: 1
   strategy:

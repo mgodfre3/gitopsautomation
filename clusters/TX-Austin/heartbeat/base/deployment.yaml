@@ -5,7 +5,7 @@ metadata:
   namespace: heartbeat
   labels:
     app.kubernetes.io/name: heartbeat
-    name: TX-Austin
+    storeName: TX-Austin
 spec:
   replicas: 1
   strategy:

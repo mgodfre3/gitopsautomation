@@ -5,7 +5,7 @@ metadata:
   namespace: heartbeat
   labels:
     app.kubernetes.io/name: heartbeat
-    name: TX-Liberty-Hill
+    storeName: TX-Liberty-Hill
 spec:
   replicas: 1
   strategy:
