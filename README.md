@@ -7,14 +7,30 @@
 ## Prerequisites
 
 - Git CLI
+- DotNet 8.0 SDK
 
 ## Quick Start
 
+- Fork this repo and clone the fork
+- Change to the repo directory (default: ./gitopsautomation)
+- Install the sample GitOps Automation tool
+
 ```bash
 
-# clone this repo
-git clone https://github.com/bartr/gitopsautomation
-git pull
+dotnet tool install --global GitOpsAutomation --version 0.3.0
+
+# run the GitOpsAutomation tool
+goa
+
+# list the clusters
+goa list clusters
+
+# list the applications
+goa list applications
+
+# re-generate the GitOps manifests
+goa gen
+git status
 
 ```
 
