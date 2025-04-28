@@ -19,6 +19,9 @@
 
 dotnet tool install --global GitOpsAutomation --version 0.3.0
 
+# if you get a nuget source missing error
+# dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
+
 # run the GitOpsAutomation tool
 goa
 
